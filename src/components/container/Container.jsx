@@ -1,6 +1,6 @@
 export const Container = ({children}) => {
   return (
-    <div className="container w-screen h-screen">
+    <div className="w-screen h-screen">
         {children}
     </div>
   )

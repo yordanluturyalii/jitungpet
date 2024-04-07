@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Logo from './../../assets/logo.png'
 import { Cross, Hamburger } from '../icons'
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
@@ -20,10 +21,10 @@ export const Navbar = () => {
                     </div>
                 </div>
                 <ul className={`w-screen h-screen bg-sky-50 flex flex-col z-50 px-12 ${isOpenMenu ? '' : 'hidden'} md:flex md:flex-row md:h-0 md:bg-none md:items-center md:w-screen md:justify-end 2xl:px-[10%]`}>
-                    <li className="mt-10 my-7 md:mt-7 md:mx-4"><a href="" className="font-medium lg:text-lg xl:text-xl">Buku Terbaru</a></li>
-                    <li className="my-7 md:mx-4"><a href="" className="font-medium lg:text-lg xl:text-xl">Beranda</a></li>
-                    <li className="my-7 md:mx-4"><a href="" className="font-medium lg:text-lg xl:text-xl">Koleksi Buku</a></li>
-                    <li className="my-7 md:mx-4"><a href="" className="font-medium lg:text-lg xl:text-xl">Tentang Kami</a></li>
+                    <li className="mt-10 my-7 md:mt-7 md:mx-4"><Link to="/book" className="font-medium lg:text-lg xl:text-xl" onClick={handleClickOpenMenu}>Buku Terbaru</Link></li>
+                    <li className="my-7 md:mx-4"><Link to="/" className="font-medium lg:text-lg xl:text-xl" onClick={handleClickOpenMenu}>Beranda</Link></li>
+                    <li className="my-7 md:mx-4"><Link to="" className="font-medium lg:text-lg xl:text-xl" onClick={handleClickOpenMenu}>Koleksi Buku</Link></li>
+                    <li className="my-7 md:mx-4"><Link to="/about" className="font-medium lg:text-lg xl:text-xl" onClick={handleClickOpenMenu}>Tentang Kami</Link></li>
                 </ul>
             </nav>
         </>
